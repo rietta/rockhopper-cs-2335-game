@@ -1,0 +1,42 @@
+<description>
+
+	Game Levels for Boulder Dash Clone
+
+	The file format is as follows:
+	Space seperated columns, one row per line.
+	
+	- Outer wall
+	= Brick
+	D Dirt
+	J Jem (The Diamond)
+	B Boulder
+	R Rockford
+	* Empty Square
+	X Enemy
+	E Exit
+
+</description>	
+
+<level-1>
+- - - - - - - - - - - - - - - - - - - -
+- R D D D = = = D B B D D - B B B B J -
+- D D D D B * J D = B J D - B J J B B -
+- D D D = = * D D D D = D - - - D - - -
+- D * * * D = D D B D D D D D D D D D -
+- D B * B D = D D D B D D D * * * * * -
+- = = = = = = D D D = D D D D * * * D -
+- J B J - D D D D D D D D B D D D D D -
+- B J - D D D D * * * W D D = = = = = -
+- B - D D D D D * * * * D D = D D B B -
+- D D D D D D D * * * * D B = D D D J - 
+- * * * * D D D D D D D D D = D B D D -
+- * * * * D D D D D D D D D = D J D D -
+- D D D D D D D J D D D D D = = = = = -
+- D D D D D D D B D D J D D D D D D D -
+- D * * * * D D D D D B D D J D D D B -
+- D * * * * D D D D D D D D B D D D J -
+- D X * * * D D D D D D D D D D D D D -
+- D D D D D D D D D D D D D D D D D E - 
+- - - - - - - - - - - - - - - - - - - -
+</level-1>
+

@@ -1,0 +1,179 @@
+RockHopper 1.0
+Simple Implementation Clone of Boulder Dash
+Copyright 2003 Ronald Ning and Frank Rietta
+
+Table of Contents
+
+Chapter 1: Gameplay
+	1.1 Ackknowledgements
+	1.2 Overview and Mission
+	1.3 How to Start the Game
+	
+Chapter 2: Navigativing the Menus
+	1.1 The Menus
+	1.2 The Status Area
+	1.3 Moving Around the Board
+
+Chapter 3: Reasons for Extra Credit
+
+Chapter 4: License and Disclaimer
+	4.1 BSD License
+	4.2 Purpose of Creation
+	4.3 Additional Disclaimer
+
++++++++++++++++++++++++++++++++++++++++++++
+Chapter 1: Basic Gameplay
++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------------
+1.1 Acknowledgements
+-------------------------------------------
+Much thanks goes to both Ronald Ning
+and Frank Rietta in creating this game. 
+Without their work none of this would be possible.
+
+Ron spent many hours constructing the interface graphics,
+and stitching the various components together.  Frank brought
+the game to life by creating the Maze handlers, interactions, "AI" for
+the bugs, and the XML level loader.
+
+-------------------------------------------
+1.1. Overview
+-------------------------------------------
+
+RockHopper is a clone of the popular Boulder Dash
+console video game from the 1980s.  You are Rockford,
+an enterprising spelunker.  Evil fiends have kidnapped the 
+Govenors' daughter and stole her away into the Stagtite mountains. 
+It is your task to brave the caves deep reccesses and rescue the 
+girl, while avoiding the many lurking dangers.
+
+Use the arrow keys to move around the map,
+push boulders asside, and collect gold.
+
+-------------------------------------------
+1.2. Starting a new Game
+-------------------------------------------
+
+From the command line:
+
+java RockHopper 
+or
+java RockHopper [level file]
+
+RockHopper levels are stored in XML text files.  When you start the game you 
+specify the level you want to load as the parameter.  If no level is specified,
+the game will default to level1.xml.
+
++++++++++++++++++++++++++++++++++++++++++++
+Chapter 2: Navigating the Menus
++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------------
+1.1. The Menus
+-------------------------------------------
+
+Rockhopper has the following menu options:
+
+File
+	-> New Game: File Chooser Dialog for Selecting an XML Level
+	-> Reset Level: Restarts the current level from scratch 
+						(good if you loose and want a retry).
+	-> Exit: Closes the Game
+
+Options
+	-> Go to the previous level: Loads the previous level (as specified in the active level file).
+	-> Go to the next level: Loads the next level (as specified in the active level file).
+	
+	Sidebar 1: Explaination:
+	
+	Each level file is an XML document.  The file contains map information and
+	other meta data.  A valid level file will have  "Previous Level" and "Next Level"
+	tags, which specify the name of the XML config files for the last and next level.
+	(Think of it as a file based linked list).
+	
+Help
+	-> How to Play: Shows a ledger of the game sprites, and enemies.
+	-> About: The mandatory, flashy, but otherwise useless box.
+
+-------------------------------------------
+1.2. The Status Area
+-------------------------------------------
+
+Under the map, three progress bars show your active
+stats in the game.
+
+Gold got: [===4/9====]   [  ===     ]   Time left: [====45 secs ]
+
+The first bar shows the percentage of gold you have collected
+to the amount required to reveal the exit; once the bar reaches 100%
+a door will appear and you can leave the current level.
+
+The second bar is a really cool star trek/knight rider affect that shows
+that your computer is alive.
+
+The third bar shows how much time you have left to complete the level,
+if it reaches 0, you die.
+
+-------------------------------------------
+1.3. Moving Around the Board
+-------------------------------------------
+
+Use the arrow keys to move around the board.
+Dig out dirt, move boulders, and collect the gold to
+reveal the hidden exit.  Take care, because one wrong
+move to mean sudden death as the cave can easily
+collapse around you.
+
++++++++++++++++++++++++++++++++++++++++++++
+Chapter 3: Reasons for Extra Credit
++++++++++++++++++++++++++++++++++++++++++++
+
+	* 8 Levels Implemented in XML files.
+	* Level files are linked together by internal XML tags.
+	* Simple enemies are implemented.
+	* Attractive UI
+	* Complete documentation (this README)
+
++++++++++++++++++++++++++++++++++++++++++++
+Chapter 4: License and Disclaimer
++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------------
+1.1 BSD License
+-------------------------------------------
+This program is licensed to you under the terms of the BSD-license.
+
+-------------------------------------------
+1.2 Purpose for Creation
+-------------------------------------------
+This software was created for academic purposes as assigned by
+the Spring, 2003, Computer Science 2335 class at the Georgia 
+Institute of Technology. Furthermore, this software is freeware 
+and may not be sold.
+
+-------------------------------------------
+1.3 Additional Disclaimer
+-------------------------------------------
+
+Whereby AUTHORS is Frank Rietta and Ronald Ning.
+
+AUTHORS DISCLAIMS ALL WARRANTIES RELATING TO THIS SOFTWARE, WHETHER 
+EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
+PURPOSE, AND ALL SUCH WARRANTIES ARE EXPRESSLY AND SPECIFICALLY
+ DISCLAIMED. NEITHER THE AUTHORS NOR ANYONE INVOLVED IN THE CREATION, 
+ PRODUCTION, OR DELIVERY OF THIS SOFTWARE SHALL BE LIABLE FOR ANY 
+ INDIRECT, CONSEQUENTIAL, OR INCIDENTAL DAMAGES ARISING OUT OF THE 
+ USE OR INABILITY TO USE SUCH SOFTWARE. IN NO EVENT SHALL THE AUTHORS 
+ OR ANY ASSOCIATES OR CONSIGNEES OF THE AUTHORS EVER BE LIABLE FOR 
+ ANY DAMAGES EXCEEDING THE PRICE PAID FOR THE LICENSE TO USE THE 
+ SOFTWARE, REGARDLESS OF THE FORM OF CLAIM. THE PERSON USING 
+ THE SOFTWARE BEARS ALL RISK AS TO THE QUALITY AND PERFORMANCE 
+ OF THE SOFTWARE. 
+
+
+
+
+
+

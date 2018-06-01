@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.4.1_01" class="java.beans.XMLDecoder"> 
+ <object class="java.util.Hashtable"> 
+
+<void method="put">
+<string>README</string>
+<string>
+
+	Game Levels for Boulder Dash Clone
+
+	The file format is as follows:
+	Space seperated columns, one row per line.
+	
+	- Outer wall
+	= Brick
+	D Dirt
+	J Jem (The Diamond)
+	B Boulder
+	R Rockford
+	* Empty Square
+	X Enemy
+	E Exit
+	
+	-------------------------------------------
+
+	Edit the level by changing the width, length, and
+	MapLayout.
+</string>
+</void>
+
+<void method="put">
+<string>Previous Level</string>
+<string>level5.xml</string>
+</void>
+
+<void method="put">
+<string>Next Level</string>
+<string>level7.xml</string>
+</void>
+
+<void method="put"> 
+<string>Width</string> 
+<int>400</int> 
+</void>
+
+ 
+<void method="put"> 
+<string>Length</string> 
+<int>400</int> 
+</void> 
+
+<void method="put">
+<string>Name</string>
+<string>Hourglass</string>
+</void>
+
+
+<void method="put"> 
+<string>MapLayout</string> 
+<string>
+ - - - - - - - - - - - - - - - - - - - - 
+ - B B J B B * B B J B B D = B D B B B - 
+ - B = D B J B B B = B B D D B B B = B - 
+ - B J B B B = B B * B J B B = B B * B - 
+ - J B B = = B B D * B = B B B B B B B - 
+ - J B J B B J J B B B * B B J B B B B - 
+ - B B B = B B B J = = B J B J B = = B - 
+ - J B B * B D J B * J B B B J J B * = - 
+ - B = B B B D B J B B J B B B = J D D - 
+ - B * B J B D J B B B B J D D * B = * - 
+ - J B D D J * B J = B = J D D B B B J - 
+ - J D * = B D J B * B * D * B B B J E - 
+ - J B B J B D B = J = * J B B J B B * - 
+ - D J D = B D J * B * B B = B B J D B - 
+ - * B * B D B B J J B D B * D = B * J - 
+ - B B B J D B B B D B = = B B * B D B - 
+ - B B J B J = B J B J B D J B D = B B - 
+ - B J D D B * B B J B J B D B B B J B - 
+ - R J B J J B J B B B J B J B = B B B - 
+ - - - - - - - - - - - - - - - - - - - - 
+</string> 
+</void> 
+
+</object>
+</java> 

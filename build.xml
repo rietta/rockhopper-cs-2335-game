@@ -1,0 +1,73 @@
+<project name="rockhopper" default="compile" basedir=".">
+    
+    <description>
+    	RockHopper Ant File. Edited for RockHopper by Frank Rietta, based on
+	work from Ronald Ning. Copyright 2003.
+    </description>
+    
+	<property name="src" location="${basedir}/src"/>
+	<property name="classes" location="${basedir}/classes"/>
+	<property name="dist" location="${basedir}/dist"/>
+	<property name="distfile" location="rockhopper.jar"/>
+	<property name="docs" location="${basedir}/docs"/>
+
+  	<path id="classes.path">
+    		<pathelement path="${classes}"/>
+	</path>
+
+  	<!-- Tasks -->
+	
+  	<target name="init">
+    		<tstamp/>
+    		<mkdir dir="${classes}"/>
+  	</target>
+  	
+  	<target name="compile" depends="init"
+  		description="compile the libs">
+		<javac srcdir="${src}" destdir="${classes}">
+			<classpath refid="classes.path"/>
+		</javac>
+  	</target>
+  	
+  	<target name="run" depends="compile">
+  	    <java fork="true" classname="RockHopper" classpathref="classes.path"/>
+  	</target>
+
+	<taskdef name="checkstyle" classname="com.puppycrawl.tools.checkstyle.CheckStyleTask"/>
+
+ 	<target name="checkstyle">
+		<checkstyle>
+			<fileset dir="${src}/" includes="**/*.java"/>
+			<formatter type="plain"/>
+		</checkstyle> 
+  	</target>
+
+  	<target name="clean" description="clean up" >
+	    	<delete dir="${classes}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${docs}"/>
+  	</target>
+
+	<target name="dist" depends="clean,compile">
+		<mkdir dir="${dist}"/>
+		
+		<copy todir="${dist}">
+    			<fileset dir="${classes}"/>
+		</copy>
+
+		<copy todir="${dist}">
+    			<fileset dir="${basedir}" includes="level*.xml"/>
+		</copy>
+
+		<jar basedir="${dist}" destfile="${distfile}"/>
+	
+		<echo message="${distfile} has been created in ${basedir}"/>
+	</target>
+
+	<target name="javadoc" depends="clean">
+		<mkdir dir="${docs}"/>
+		<javadoc destdir="${docs}">
+			<fileset dir="${src}"/>
+		</javadoc>
+  	</target>	
+</project>
